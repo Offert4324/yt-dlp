@@ -135,6 +135,7 @@ class MediciEduIE(InfoExtractor):
     _NETRC_MACHINE = 'medici-edu'
     _TESTS = [{
         'url': 'https://edu.medici.tv/en/operas/wagner-lohengrin-paris-opera-kirill-serebrennikov-piotr-beczala-kwangchul-youn-johanni-van-oostrum',
+        'md5': '91eb9bae12f78c826221ac465097d3bb',
         'info_dict': {
             'id': '7900',
             'ext': 'mp4',
@@ -145,9 +146,10 @@ class MediciEduIE(InfoExtractor):
             'timestamp': 1697554771,
             'display_id': 'wagner-lohengrin-paris-opera-kirill-serebrennikov-piotr-beczala-kwangchul-youn-johanni-van-oostrum',
         },
-        'skip': 'Requires authentication',
+        'expected_warnings': [r'preview'],
     }, {
         'url': 'https://edu.medici.tv/en/masterclasses/yvonne-loriod-olivier-messiaen',
+        'md5': '5737b5b4d50a842605f5f7db6b76bce2',
         'info_dict': {
             'id': '3024',
             'ext': 'mp4',
@@ -158,7 +160,7 @@ class MediciEduIE(InfoExtractor):
             'timestamp': 1424706608,
             'display_id': 'yvonne-loriod-olivier-messiaen',
         },
-        'skip': 'Requires authentication',
+        'expected_warnings': [r'preview'],
     }]
 
     _API_BASE = 'https://api.medici.tv/edu-satie'
